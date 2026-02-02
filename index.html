@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federal Grant Initiative — Concept Demo</title>
+  <meta name="description" content="Concept demo of a grant initiative website. All profiles and testimonials are illustrative samples." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --panel:#121832;
+      --glass:rgba(255,255,255,.08);
+      --accent:#4da3ff;
+      --accent-2:#7cffc4;
+      --text:#e8ecf4;
+      --muted:#aab1c6;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#1b2457 0%,transparent 60%),radial-gradient(900px 500px at 90% 10%,#0f3a6d 0%,transparent 55%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:auto;padding:24px}
+
+    /* HERO */
+    .hero{position:relative;overflow:hidden;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 30px 80px rgba(0,0,0,.45)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:56px}
+    .badge{display:inline-flex;gap:10px;align-items:center;padding:8px 14px;border-radius:999px;background:var(--glass);backdrop-filter:blur(10px);font-weight:600}
+    .badge img{height:18px}
+    h1{font-size:56px;line-height:1.02;margin:16px 0}
+    .lead{font-size:18px;color:var(--muted);max-width:560px}
+    .cta{display:flex;gap:14px;margin-top:28px}
+    .btn{padding:14px 18px;border-radius:14px;font-weight:700;border:1px solid rgba(255,255,255,.15);background:linear-gradient(135deg,var(--accent),#7ab8ff);color:#08111f;cursor:pointer}
+    .btn.alt{background:transparent;color:var(--text)}
+    .flag{position:absolute;right:-40px;top:-40px;width:320px;opacity:.35;filter:drop-shadow(0 20px 40px rgba(0,0,0,.4))}
+
+    /* 4D PARALLAX */
+    .parallax{position:relative;transform-style:preserve-3d}
+    .float{transform:translateZ(40px)}
+
+    /* SECTIONS */
+    section{margin:64px 0}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px;backdrop-filter:blur(10px)}
+    .card img{width:100%;height:200px;object-fit:cover;border-radius:12px}
+    .amount{font-size:22px;font-weight:900;margin-top:10px}
+    .note{font-size:12px;color:var(--muted)}
+
+    /* TESTIMONIALS */
+    .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .quote{font-size:14px;color:#eaf0ff}
+    .source{font-size:12px;color:var(--muted);margin-top:8px}
+
+    /* FOOTER */
+    footer{border-top:1px solid rgba(255,255,255,.12);padding:28px 0;color:var(--muted)}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;padding:28px}
+      h1{font-size:40px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .quotes{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero parallax" id="hero">
+      <img class="flag float" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA Flag" />
+      <div class="hero-inner float">
+        <div>
+          <span class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Seal_of_the_United_States_Department_of_Treasury.svg" alt="Seal"> Concept Demonstration</span>
+          <h1>Federal Grant Initiative</h1>
+          <p class="lead">This is a high‑fidelity UI/UX demo showcasing how a modern grant platform could look and feel. All recipients, amounts, and testimonials below are illustrative samples.</p>
+          <div class="cta">
+            <button class="btn">View Sample Awards</button>
+            <button class="btn alt">How It Works</button>
+          </div>
+        </div>
+        <div class="card">
+          <strong>Funding Range (Sample)</strong>
+          <p class="amount">$50,000 – $250,000</p>
+          <p class="note">Amounts shown are examples for demonstration purposes only.</p>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2>Sample Grant Recipients</h2>
+      <p class="note">Stock photography used. Individuals portrayed are not real recipients.</p>
+      <div class="grid">
+        <!-- Repeatable cards (10–20 samples) -->
+        <div class="card"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Sample"><div class="amount">$75,000</div><div class="note">Small Business Expansion</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136" alt="Sample"><div class="amount">$120,000</div><div class="note">Community Development</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Sample"><div class="amount">$50,000</div><div class="note">Startup Support</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Sample"><div class="amount">$95,000</div><div class="note">Education Program</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1543269865-cbf427effbad" alt="Sample"><div class="amount">$150,000</div><div class="note">Infrastructure</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1523958203904-cdcb402031fd" alt="Sample"><div class="amount">$60,000</div><div class="note">Non‑Profit Operations</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Sample"><div class="amount">$210,000</div><div class="note">Healthcare Initiative</div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Sample"><div class="amount">$80,000</div><div class="note">Agriculture Program</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Illustrative Testimonials</h2>
+      <p class="note">Sample quotes inspired by typical public feedback. Not pulled from real social media accounts.</p>
+      <div class="quotes">
+        <div class="card"><div class="quote">“The application flow was clear and the support resources were outstanding. A great example of how funding programs should operate.”</div><div class="source">— Sample Facebook Comment</div></div>
+        <div class="card"><div class="quote">“Transparent criteria and fast review. This platform sets a new standard for grant accessibility.”</div><div class="source">— Sample LinkedIn Post</div></div>
+        <div class="card"><div class="quote">“From submission to award notification, the experience felt professional and well‑structured.”</div><div class="source">— Sample X / Twitter Reply</div></div>
+      </div>
+    </section>
+
+    <footer>
+      <strong>Disclosure</strong>
+      <p class="note">This website is a design and development demonstration only. It does not represent a real government program, does not offer funding, and does not depict real recipients or testimonials.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Lightweight 4D-style parallax
+    const hero = document.getElementById('hero');
+    hero.addEventListener('mousemove', (e)=>{
+      const r = hero.getBoundingClientRect();
+      const x = (e.clientX - r.left)/r.width - .5;
+      const y = (e.clientY - r.top)/r.height - .5;
+      hero.querySelectorAll('.float').forEach(el=>{
+        el.style.transform = `translate3d(${x*20}px, ${y*20}px, 40px)`;
+      });
+    });
+    hero.addEventListener('mouseleave', ()=>{
+      hero.querySelectorAll('.float').forEach(el=>{
+        el.style.transform = 'translate3d(0,0,40px)';
+      });
+    });
+  </script>
+</body>
+</html>
